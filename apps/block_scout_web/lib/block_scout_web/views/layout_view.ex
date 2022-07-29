@@ -9,7 +9,7 @@ defmodule BlockScoutWeb.LayoutView do
 
   @default_other_networks [
     %{
-      title: "ETH chain",
+      title: "ETH Chain",
       url: "https://etherscan.io/"
     },
     %{
