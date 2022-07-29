@@ -60,7 +60,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/block_scout_web/templates/layout/_default_title.html.eex:2
-msgid "%{subnetwork} Explorer - BlockScout"
+msgid "%{subnetwork} Explorer - Amstar"
 msgstr ""
 
 #, elixir-format
