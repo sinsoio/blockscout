@@ -9,8 +9,8 @@ defmodule BlockScoutWeb.LayoutView do
 
   @default_other_networks [
     %{
-      title: "POA",
-      url: "https://blockscout.com/poa/core"
+      title: "ETH chain",
+      url: "https://etherscan.io/"
     },
     %{
       title: "Sokol",
@@ -18,8 +18,8 @@ defmodule BlockScoutWeb.LayoutView do
       test_net?: true
     },
     %{
-      title: "Gnosis Chain",
-      url: "https://blockscout.com/xdai/mainnet"
+      title: "BSC Chain",
+      url: "https://bscscan.com/"
     },
     %{
       title: "Ethereum Classic",
