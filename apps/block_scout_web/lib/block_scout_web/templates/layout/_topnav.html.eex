@@ -67,7 +67,7 @@
               <span class="nav-link-icon">
                 <%= render BlockScoutWeb.IconsView, "_tokens_icon.html" %>
               </span>
-              <%= gettext("ASAR") %>
+              <%= gettext("Tokens") %>
             </a>
             <div class="dropdown-menu" aria-labeledby="navbarTransactionsDropdown"> 
               <%= link(
@@ -76,7 +76,7 @@
                     to: tokens_path(@conn, :index)
                   ) %>
               <%= link(
-                    gettext("Ether"),
+                    gettext("ASAR"),
                     class: "dropdown-item #{tab_status("accounts", @conn.request_path)}",
                     to: address_path(@conn, :index)
                   ) %>
