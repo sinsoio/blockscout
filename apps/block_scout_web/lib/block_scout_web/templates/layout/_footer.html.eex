@@ -30,6 +30,7 @@
           <a href="https://t.me/sinsonetwork" rel="noreferrer" target="_blank" class="footer-social-icon" title='<%= gettext("Telegram") %>'>
             <div class="footer-social-icon-container fontawesome-icon telegram"></div>
           </a>
+          <a class="footer-link js-btn-add-chain-to-mm btn-add-chain-to-mm in-footer" style="cursor: pointer;">Add ASAR Network</a>
         </div>
       </div>
 
