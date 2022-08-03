@@ -6,13 +6,12 @@ export async function addChainToMM ({ btn }) {
     const chainIDFromEnvVar = parseInt(process.env.CHAIN_ID)
     const chainIDHex = chainIDFromEnvVar && `0x${chainIDFromEnvVar.toString(16)}`
     const blockscoutURL = location.protocol + '//' + location.host + process.env.NETWORK_PATH
-    const SUBNETWORK="ASAR Mainnet"
     if (chainID !== chainIDHex) {
       await window.ethereum.request({
         method: 'wallet_addEthereumChain',
         params: [{
           chainId: chainIDHex,
-          chainName: SUBNETWORK,
+          chainName: process.env.SUBNETWORK,
           nativeCurrency: {
             name: process.env.COIN_NAME,
             symbol: process.env.COIN_NAME,
@@ -25,7 +24,7 @@ export async function addChainToMM ({ btn }) {
     } else {
       btn.tooltip('dispose')
       btn.tooltip({
-        title: `You're already connected to ${SUBNETWORK}`,
+        title: `You're already connected to ${process.env.SUBNETWORK}`,
         trigger: 'click',
         placement: 'bottom'
       }).tooltip('show')
