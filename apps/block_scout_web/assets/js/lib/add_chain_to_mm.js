@@ -11,7 +11,7 @@ export async function addChainToMM ({ btn }) {
         method: 'wallet_addEthereumChain',
         params: [{
           chainId: chainIDHex,
-          chainName: process.env.SUBNETWORK,
+          chainName: "ASAR Mainnet",
           nativeCurrency: {
             name: process.env.COIN_NAME,
             symbol: process.env.COIN_NAME,
@@ -24,7 +24,7 @@ export async function addChainToMM ({ btn }) {
     } else {
       btn.tooltip('dispose')
       btn.tooltip({
-        title: `You're already connected to ${process.env.SUBNETWORK}`,
+        title: `You're already connected to ASAR Mainnet`,
         trigger: 'click',
         placement: 'bottom'
       }).tooltip('show')
