@@ -9,8 +9,8 @@ defmodule BlockScoutWeb.LayoutView do
 
   @default_other_networks [
     %{
-      title: "ETH Chain",
-      url: "https://etherscan.io/"
+      title: "POA",
+      url: "https://blockscout.com/poa/core"
     },
     %{
       title: "Sokol",
@@ -18,8 +18,8 @@ defmodule BlockScoutWeb.LayoutView do
       test_net?: true
     },
     %{
-      title: "BSC Chain",
-      url: "https://bscscan.com/"
+      title: "Gnosis Chain",
+      url: "https://blockscout.com/xdai/mainnet"
     },
     %{
       title: "Ethereum Classic",
@@ -252,4 +252,29 @@ defmodule BlockScoutWeb.LayoutView do
   end
 
   defp validate_url(_), do: :error
+
+  def sign_in_link do
+    if Mix.env() == :test do
+      "/auth/auth0"
+    else
+      Application.get_env(:block_scout_web, BlockScoutWeb.Endpoint)[:url][:path] <> "auth/auth0"
+    end
+  end
+
+  def sign_out_link do
+    client_id = Application.get_env(:ueberauth, Ueberauth.Strategy.Auth0.OAuth)[:client_id]
+    return_to = Application.get_env(:ueberauth, Ueberauth)[:logout_return_to_url]
+    logout_url = Application.get_env(:ueberauth, Ueberauth)[:logout_url]
+
+    if client_id && return_to && logout_url do
+      params = [
+        client_id: client_id,
+        returnTo: return_to
+      ]
+
+      [logout_url, "?", URI.encode_query(params)]
+    else
+      []
+    end
+  end
 end
