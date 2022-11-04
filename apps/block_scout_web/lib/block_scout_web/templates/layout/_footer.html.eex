@@ -38,7 +38,7 @@
         <ul>
           <li><a href="https://github.com/sinsoio/blockscout" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Submit an Issue") %></a></li>
           <li><a href="https://github.com/sinsoio/blockscout" rel="noreferrer" class="footer-link"><%= gettext("Contribute") %></a></li>
-          <li><a href="https://discord.com/invite/m8eqcHJ5ur" rel="noreferrer" class="footer-link"><%= gettext("Chat (#amstar)") %></a></li>
+          <li><a href="https://discord.com/invite/m8eqcHJ5ur" rel="noreferrer" class="footer-link"><%= gettext("Chat (#Amstar)") %></a></li>
           <%= if Application.get_env(:block_scout_web, :footer)[:enable_forum_link] do %>
             <li><a href="<%= Application.get_env(:block_scout_web, :footer)[:forum_link] %>" rel="noreferrer" class="footer-link"><%= gettext("Forum") %></a></li>
           <% end %>
