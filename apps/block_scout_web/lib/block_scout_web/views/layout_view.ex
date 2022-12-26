@@ -19,6 +19,10 @@ defmodule BlockScoutWeb.LayoutView do
     },
     %{
       title: "Amstar Network",
+      url: "https://mainnet.amstarscan.com/"
+    },
+    %{
+      title: "Amstar Network",
       url: "https://testnet.amstarscan.com/",
       test_net?: true
     }
